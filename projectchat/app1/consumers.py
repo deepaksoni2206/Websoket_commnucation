@@ -118,9 +118,9 @@ class LoginConsumer(AsyncWebsocketConsumer):
 
             # 2. Doosra message: Form Message
             await self.send(text_data=json.dumps({
-                'type': 'form_request',
-                'message': "Please fill out your profile details.",
-                'fields': ['Full Name', 'City', 'Experience']
+                'type': 'Mechbuddy',
+                'message': "Everything you need, in one place. Access your data, track your progress, and manage your tasks effortlessly from a single, organized dashboard designed to keep you productive and focused.",
+                # 'fields': ['Full Name', 'City', 'Experience']
             }))
             
         else:
