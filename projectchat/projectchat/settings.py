@@ -25,9 +25,14 @@ SECRET_KEY = 'django-insecure-$qpcaca8sg=bamgg_0v*i3i%ve)fp#1i6q_2or)wj+%l%_68_n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['my-app.onrender.com', 'localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = [
+    'localhost', 
+    '127.0.0.1', 
+    '.onrender.com', # Ye Render ke saare subdomains allow kar dega
+    'mechbuddy-6681c7d1330e.herokuapp.com' # Heroku wala bhi rehne dein
+]
 
 
 # Application definition
