@@ -123,12 +123,15 @@ class LoginConsumer(AsyncWebsocketConsumer):
                 'message': "Everything you need, in one place. Access your data, track your progress, and manage your tasks effortlessly from a single, organized dashboard designed to keep you productive and focused.",
                 # 'fields': ['Full Name', 'City', 'Experience']
             }))
+            await self.close()   # for close connection after sending message
             
         else:
             await self.send(text_data=json.dumps({
                 'type': 'error',
                 'message': "Invalid OTP. Try again."
             }))
+
+            await self.close()  # for close connection after sending message
 
 
 
